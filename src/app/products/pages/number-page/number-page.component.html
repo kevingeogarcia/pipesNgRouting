@@ -1,3 +1,28 @@
+<p-panel header="Pipes Númericos" class="p-1">
+  <p>
+    Pipes incluidos en Angular. Para la representación de números
+  </p>
+</p-panel>
 
-  <p>number-page works!</p>
 
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="Number" subheader="presneta el valor dado en formato númerico">
+      {{ (totalSells + 1235) | number: '1.2-2' }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Currency" subheader="presenta el valor segun moneda configurada.">
+      {{ totalSells | currency: 'SVC': '	₡ ': "1.4-4" }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Percent" subheader="presenta el porcentaje de un numero dado.">
+      {{ percent | percent: '1.2-2' }}
+    </p-card>
+  </div>
+
+
+</div>
