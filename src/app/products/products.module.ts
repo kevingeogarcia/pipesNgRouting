@@ -6,13 +6,18 @@ import { BasicPageComponent } from './pages/basic-page/basic-page.component';
 import { NumberPageComponent } from './pages/number-page/number-page.component';
 import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.component';
 import { PrimeNGModule } from '../prime-ng/prime-ng.module';
+import { OrderComponent } from './pages/order/order.component';
+import { ToggleCasePipe } from './pipes/toggle-case.pipe';
+
 
 
 @NgModule({
   declarations: [
     BasicPageComponent,
     NumberPageComponent,
-    UncommonPageComponent
+    UncommonPageComponent,
+    OrderComponent,
+    ToggleCasePipe
 
   ],
   imports: [
