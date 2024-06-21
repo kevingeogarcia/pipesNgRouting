@@ -49,7 +49,7 @@ export class UncommonPageComponent {
   public person = {
     name: 'Kevin',
     age: 25,
-    address: 'San Salvador, El Salvador'
+    address: 'San Salvador'
   }
 
   // Async Pipe

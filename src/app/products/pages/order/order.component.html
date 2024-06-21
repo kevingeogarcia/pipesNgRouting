@@ -1,24 +1,57 @@
 <p-panel header="Pipes personalizados" class="p-1">
   <p>
-    Pipes personalizados creados por mí {{'Kevin Hernandez' | toggleCase }}
+    Pipes personalizados creados por mí {{'Kevin Hernandez' | toggleCase:isUpperCase }}
   </p>
+  <p-button label="ToggleCase" icon="pi pi-search" (click)="toggleUpperCase()" />
 </p-panel>
 
-<div class="card">
-  <p-toolbar>
-    <div class="p-toolbar-group-start">
-      <p-button icon="pi pi-plus" class="mr-2" />
-      <p-button icon="pi pi-print" class="mr-2" />
-      <p-button icon="pi pi-upload" />
-    </div>
-    <div class="p-toolbar-group-center">
-      <span class="p-input-icon-left">
-          <i class="pi pi-search"></i>
-          <input pInputText placeholder="Search"/>
-      </span>
-    </div>
-    <div class="p-toolbar-group-end">
 
+<p-toolbar>
+  <div class="p-toolbar-group-start">
+    <p>Pipes de ordenamiento aplicado a arreglos de objetos</p>
+
+  </div>
+  <div class="p-toolbar-group-end">
+    <div class="grip">
+      <div class="flex flex-column md:flex-row md:justify-content-between row-gap-3">
+
+        <p-button label="Por Nombre " icon="pi pi-sort" styleClass="p-button-success p-button " class="mr-2"
+          (onClick)="changeOrderbyKeyOfHero('name')" />
+
+
+        <p-button label="Por Volar " icon="pi pi-sort" styleClass="p-button-danger   p-button" class="mr-2 "
+          (onClick)="changeOrderbyKeyOfHero('canFly')" />
+
+
+        <p-button label="Por Color " icon="pi pi-sort" styleClass="p-button-help  p-button " class="mr-2"
+          (onClick)="changeOrderbyKeyOfHero('color')" />
+
+      </div>
     </div>
-  </p-toolbar>
+  </div>
+</p-toolbar>
+
+
+<div class="grip">
+  <div class="col mt-2">
+    <p-panel header="Héroes">
+
+      <p-table [value]="heroes | sortBy:keySortBy " [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Name</th>
+            <th>Vuela</th>
+            <th>Color</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-hero>
+          <tr>
+            <td>{{ hero.name }}</td>
+            <td>{{ hero.canFly | canFly | titlecase}}</td>
+            <td>{{ hero.color }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-panel>
+  </div>
 </div>

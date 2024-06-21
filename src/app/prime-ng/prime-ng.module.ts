@@ -6,7 +6,8 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { PanelModule } from 'primeng/panel';
 import { ToolbarModule } from 'primeng/toolbar';
 import { InputTextModule } from 'primeng/inputtext';
-import { FloatLabelModule } from 'primeng/floatlabel';
+import { TableModule } from 'primeng/table';
+
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { FloatLabelModule } from 'primeng/floatlabel';
     PanelModule,
     ToolbarModule,
     InputTextModule,
-    FloatLabelModule,
+    TableModule,
   ],
   declarations: [],
 
