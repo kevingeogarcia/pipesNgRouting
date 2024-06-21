@@ -21,8 +21,7 @@ import { SortByPipe } from './pipes/sort-by.pipe';
     OrderComponent,
     ToggleCasePipe,
     CanFlyPipe,
-    SortByPipe
-
+    SortByPipe,
   ],
   imports: [
     CommonModule,
